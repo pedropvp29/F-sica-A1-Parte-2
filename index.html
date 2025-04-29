@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Física A1 Parte 2</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+        * { margin: 0; padding: 0; color: white; font-family: 'Poppins', sans-serif; }
+        body { background-color: #202731; }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #293340;
+            box-shadow: 0 0 10px rgba(0,0,0,0.3);
+        }
+        nav h1 { font-size: 2rem; transition: color 0.5s ease-in; }
+        nav h1:hover { color: #FF5454; }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 500;
+            margin-left: 15px;
+            transition: color 0.3s;
+        }
+        nav a:hover { color: #FF5454; }
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-bottom: 50px;
+        }
+        .content {
+            width: 70vw;
+            max-width: 800px;
+            padding: 20px;
+            margin: 50px 0;
+            background-color: #293340;
+            box-shadow: 0 0 9px rgba(0,0,0,0.3);
+            border-radius: 10px;
+        }
+        .content h1 { color: #FF5454; margin-bottom: 15px; }
+        .content p {
+            text-indent: 30px;
+            margin-bottom: 1em;
+            line-height: 1.6;
+        }
+        .equation {
+            text-align: center;
+            margin: 20px 0;
+            font-style: italic;
+        }
+        /* Tabelas com tema vermelho */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #FF5454;
+            padding: 10px;
+            text-align: center;
+        }
+        th { background-color: #FF5454; }
+        td { background-color: #3a414d; }
+    </style>
+</head>
+<body>
+    <nav>
+        <h1>Física A1 Parte 2</h1>
+        <div>
+            <a href="#introduction">Introdução</a>
+            <a href="#Part1">Parte 1</a>
+        </div>
+    </nav>
+    <main>
+        <section id="introduction">
+            <div class="content">
+                <h1>Introdução</h1>
+                <p>Em 1701, aos 60 anos, Isaac Newton publicou anonimamente o trabalho <em>Scala Graduum Caloris</em>, propondo um método capaz de medir temperaturas de até 1000 °C, algo inviável com os termômetros da época. Esse método originou a Lei do Resfriamento de Newton, que estabelece que a taxa de variação da temperatura de um corpo é proporcional à diferença entre sua temperatura e a do meio ambiente (BRONSON e COSTA, 2008).</p>
+                <p>O conceito de <strong>equilíbrio térmico</strong> fundamenta essa lei: um corpo a uma temperatura <em>T</em>, exposto a um ambiente a <em>T<sub>a</sub></em>, troca calor até que ambas as temperaturas se igualem, pois o calor flui sempre do mais quente para o mais frio.</p>
+                <p>Newton observou que, mesmo em sistema teoricamente isolado, o resfriamento prossegue devido à remoção de calor pelo ar em movimento, formulando então sua equação de resfriamento:</p>
+                <p class="equation">T = T<sub>0</sub> · 10<sup>−K·t</sup></p>
+                <p>Onde <em>T<sub>0</sub></em> é a temperatura inicial, <em>K</em> é a constante de decaimento térmico e <em>t</em> é o tempo decorrido.</p>
+            </div>
+        </section>
+        <section id="Part1">
+            <div class="content">
+                <h1>Parte 1</h1>
+                <p>Na primeira etapa, mediu-se a temperatura ambiente:</p>
+                <p class="equation">T<sub>ambiente</sub> = 29 °C</p>
+                <p>Em seguida, registraram-se medições da temperatura de uma substância a cada minuto:</p>
+                <table>
+                    <thead>
+                        <tr><th>Tempo (min)</th><th>T (°C)</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>0</td><td>98</td></tr>
+                        <tr><td>1</td><td>84</td></tr>
+                        <tr><td>2</td><td>78</td></tr>
+                        <tr><td>3</td><td>75</td></tr>
+                        <tr><td>4</td><td>71</td></tr>
+                        <tr><td>5</td><td>68</td></tr>
+                        <tr><td>6</td><td>66</td></tr>
+                        <tr><td>7</td><td>64</td></tr>
+                        <tr><td>8</td><td>62</td></tr>
+                        <tr><td>9</td><td>61</td></tr>
+                        <tr><td>10</td><td>58</td></tr>
+                    </tbody>
+                </table>
+                <p>Com os dados medidos, determinou-se a constante de decaimento térmico:</p>
+                <p class="equation">K = 0,01</p>
+                <p>Assim, a equação de resfriamento foi estabelecida:</p>
+                <p class="equation">T(t) = 371 · 10<sup>−0,01t</sup></p>
+                <p>A seguir, a tabela com os valores <strong>previstos</strong> de temperatura em função do tempo (°C):</p>
+                <table>
+                    <thead>
+                        <tr><th>Tempo (min)</th><th>T<sub>prev</sub> (°C)</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>0</td><td>97,9</td></tr>
+                        <tr><td>1</td><td>89,5</td></tr>
+                        <tr><td>2</td><td>80,9</td></tr>
+                        <tr><td>3</td><td>72,9</td></tr>
+                        <tr><td>4</td><td>64,9</td></tr>
+                        <tr><td>5</td><td>57,5</td></tr>
+                        <tr><td>6</td><td>49,9</td></tr>
+                        <tr><td>7</td><td>42,4</td></tr>
+                        <tr><td>8</td><td>35,2</td></tr>
+                        <tr><td>9</td><td>28,0</td></tr>
+                        <tr><td>10</td><td>21,6</td></tr>
+                    </tbody>
+                </table>
+                <p>Por fim, apresenta-se a tabela com a <strong>variação percentual</strong> entre os valores medidos e previstos (<em>(medido – previsto) / previsto × 100</em>):</p>
+                <table>
+                    <thead>
+                        <tr><th>Tempo (min)</th><th>T medido (°C)</th><th>T prev (°C)</th><th>Variação (%)</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>0</td><td>98</td><td>97,9</td><td>0,1</td></tr>
+                        <tr><td>1</td><td>84</td><td>89,5</td><td>−6,1</td></tr>
+                        <tr><td>2</td><td>78</td><td>80,9</td><td>−3,6</td></tr>
+                        <tr><td>3</td><td>75</td><td>72,9</td><td>2,9</td></tr>
+                        <tr><td>4</td><td>71</td><td>64,9</td><td>9,4</td></tr>
+                        <tr><td>5</td><td>68</td><td>57,5</td><td>18,1</td></tr>
+                        <tr><td>6</td><td>66</td><td>49,9</td><td>32,3</td></tr>
+                        <tr><td>7</td><td>64</td><td>42,4</td><td>50,9</td></tr>
+                        <tr><td>8</td><td>62</td><td>35,2</td><td>75,0</td></tr>
+                        <tr><td>9</td><td>61</td><td>28,0</td><td>117,9</td></tr>
+                        <tr><td>10</td><td>58</td><td>21,6</td><td>168,5</td></tr>
+                    </tbody>
+                </table>
+                <p>Ao comparar os valores medidos e previstos, nota-se que a variação percentual oscila entre 0,1% e 168,5%, indicando que o modelo apresenta boa concordância nos primeiros minutos, mas tende a se afastar com o passar do tempo. Essa discrepância pode dever-se à circulação insuficiente de ar durante as medições, o que retardou a dissipação de calor da amostra.</p>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
